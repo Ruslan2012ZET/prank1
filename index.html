@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Показать фото по клику</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(#002B36, #14655B, #A7FFEB);
+        width: auto;
+        height: 900px;
+    }
+
+    img{
+        width: 900px;
+        height: 600px;
+    }
+
+    button{
+        width: 160px;
+        height: 60px;
+        border-radius: 35px;
+        border: none;
+        background-color: burlywood;
+        color: #fff;
+    }
+
+    button:active{
+        transform: scale(0.8);
+    }
+
+    h1{
+        color: #fff;
+        font-size: 55px;
+    }
+
+
+</style>
+<body>
+
+    <img id="photo" src="./scrimer.png" alt="Фото" style="display: none;">
+    <h1 id="a"></h1>
+
+<br><br>
+
+<button id="showPhotoBtn">Нажми на кнопку</button>
+
+
+<script>
+  const button = document.getElementById('showPhotoBtn');
+  const photo = document.getElementById('photo');
+  const a = document.getElementById("a")
+
+  button.addEventListener('click', function() {
+    photo.style.display = 'block'; 
+    a.innerHTML="Пошёл нахуй🖕"
+  });
+</script>
+
+</body>
+</html>
